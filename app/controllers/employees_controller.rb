@@ -62,9 +62,9 @@ class EmployeesController < ApplicationController
     def set_employee
       @employee = Employee.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.require(:employee).permit(:firstname, :secondname, :phone,:fullname)
+      params.require(:employee).permit(:firstname, :secondname, :phone)
     end
+  
 end
